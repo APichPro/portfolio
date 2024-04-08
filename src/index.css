@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Morganite-ExtraLight';
+  src: url('./assets/fonts/Morganite-ExtraLight.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}  
+
+
+:root {
+  --font-base: 'Morganite-ExtraLight';
+  --color-golden: #ECC86C;
+  --color-background: #0C0D11;
+  --color-white: #FFFFFF;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-base);
+  overflow: hidden;
+  height: 100%;
+  background-color: var(--color-background);
+}
+
+* {
+  box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+}
+
+a { 
+  color: unset;
+  text-decoration: none;
+}
+
+.background_image {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  z-index: -1;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(circle, rgba(0,0,0,0) 0% , rgba(12,13,17,1) 55%),
+    url(./assets/images/back.png)
+}
+
+.links {
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  height: 100vh;
+}
+
+.locales {
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 3;
+  display: none;
+}
+
+.app {
+  padding: 8vh 24vw;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .links {
+    display: none;
+  }
+  .app {
+    padding: 0;
+  }
+  .locales {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .links {
+    display: none;
+  }
+  .app {
+    padding: 0;
+  }
+  .locales {
+    display: flex;
+  }
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--color-golden);
+  border-radius: 10px;
+}
+
+
+.overflow-scroll-gradient {
+  position: relative;
+}
+.overflow-scroll-gradient::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.001),
+    var(--color-background)
+  );
+  pointer-events: none;
+}

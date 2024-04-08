@@ -1,0 +1,45 @@
+.resume_page {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+}
+.resume_content {
+  overflow-y: scroll;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.resume_pdf {
+  height: 100%;
+}
+
+@media screen and (max-width: 2000px) {
+  .resume_content{
+    height: 75vh;
+    padding: 32px 56px;
+  }
+  .resume_pdf {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .resume_content{
+    height: 85vh;
+    padding: 32px 56px;
+  }
+  .resume_pdf {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .resume_content{
+    height: 85vh;
+    padding: 16px;
+  }
+  .resume_pdf {
+    width: 100vw;
+  }
+}

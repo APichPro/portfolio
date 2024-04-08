@@ -1,0 +1,12 @@
+.tooltip {
+  border: 1px solid var(--color-golden);
+  position: static;
+  border-radius: 10px;
+  font-size: 72px;
+  color: var(--color-golden);
+  text-align: center;
+}
+
+.tooltip div {
+  display: flex;
+}

@@ -1,0 +1,31 @@
+.skillspage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills_content {
+  top: -30px;
+  position: absolute;
+  height: 100vh;
+}
+
+@media screen and (max-width: 2000px) {
+  .skill_filter {
+    z-index: 2;
+    margin-top: 25%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .skill_filter {
+    margin-top: 0%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skill_filter {
+    margin-top: 0%;
+  }
+}
